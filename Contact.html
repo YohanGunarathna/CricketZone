@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>FeedBack</title>
+	<link rel= "stylesheet" type="text/css" href="Contact.css">
+</head>
+
+<body>
+				<div id="contact" class="slate">
+				<h1><center> CONTACT </center></h1>
+				
+				<p> Please contact the Cricket Zone team with any questions, comments, or concerns </p><hr>
+					</div>
+				  <form class="email" id="myForm">
+						<h7>Name:</h7>
+						<input type="text" name="name" id="fname" placeholder="Chamodh Karunarathna">
+						<br>
+					    <h7>E-mail:</h7>
+						<input type="text" name="email" id="email" placeholder="Chamodh.randil95@gmail.com" />
+						<br>
+						<h7>Subject:</h7>
+						<input type="text" name="subject" id="subject" placeholder="cricketzone Website"/>
+						<br>
+						<h7>Message:</h7>
+						<p> <textarea name="message" id="comments" placeholder="Leave your message here!"></textarea></p>
+	                    <br>
+					  
+	
+					  
+						<ul class="rate-area">
+
+  <input type="radio" id="5-star" name="rating" value="5" /><label for="5-star" title="Amazing">5 stars</label>
+
+  <input type="radio" id="4-star" name="rating" value="4" /><label for="4-star" title="Good">4 stars</label>
+
+  <input type="radio" id="3-star" name="rating" value="3" /><label for="3-star" title="Average">3 stars</label>
+
+  <input type="radio" id="2-star" name="rating" value="2" /><label for="2-star" title="Not Good">2 stars</label>
+
+  <input type="radio" id="1-star" name="rating" value="1" /><label for="1-star" title="Bad">1 star</label>
+
+</ul>
+		<div class="popup" onclick="myFunction3()" style="margin-top: 80px;" >
+	<button  onclick="myFunction1()" id="submit" style="padding:10px;">Submit</button>
+<span class="popuptext" id="myPopup" ><p id="demo"></p></span>
+ </div>
+
+			  
+
+					  </form>
+				  
+<script>
+function myFunction1() {
+	if(document.getElementById("fname").value!="" ){
+		
+	if(document.getElementById("5-star").checked){
+			
+			var rating="Excellent!!!"
+		}
+		if(document.getElementById("4-star").checked){
+			
+			var rating="Very Good"
+		}
+		if(document.getElementById("3-star").checked){
+			
+			var rating="Satisfied"
+		}
+		if(document.getElementById("2-star").checked){
+			
+			var rating="Not Satisfied"
+		}
+		if(document.getElementById("1-star").checked){
+			
+			var rating="Bad!!!"
+		}
+	
+  
+    var txt = "";
+   		 
+   
+        txt = "Dear " + document.getElementById("fname").value + " Thank you very much for your feedback...Your comment was "+document.getElementById("comments").value+" and you rated our Website as "+ rating;
+ 
+    document.getElementById("demo").innerHTML = txt;
+	}
+	
+	function  myFunction3() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+	 
+}
+	
+</script>
+                    
+  
+					
+				
+	
+</body>
+<footer>
+	Editer:<a href="#chamodh">Chamodh Karunarathna</a>
+</footer>
+</html>

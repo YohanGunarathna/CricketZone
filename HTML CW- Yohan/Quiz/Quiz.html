@@ -1,0 +1,158 @@
+<html>
+<head>
+<title>Quiz </title>
+<link rel="stylesheet" type="text/css" href="quiz.css">
+<script src="quiz.js" type="text/javascript" ></script>
+
+
+</head>
+
+<body>
+
+	<div class="header" id="list"><center><img src="logo.jpg" alt="logo" width="100px" ma></center></div>
+<div class="nav">
+
+
+
+<form name="Quiz">
+<div id= "button"> <center><u>  Test Your Cricket knowledge </u>  </center></div>
+
+<div id ="timer_heading2"> </div>
+<div class ="questions">
+
+
+
+
+<p> 1.How many deliveries are there in an over? </p>
+<ul>
+<input type="radio" name="q1" value="5" id="q1a"> 5<br/>
+<input type="radio" name="q1" value="6" id="q1b"> 6<br/>
+<input type="radio" name="q1" value="7" id="q1c"> 7<br/>
+<input type="radio" name="q1" value="8" id="q1d"> 8<br/>
+</ul>
+
+<p> 2.What does LBW stand for? </p>
+<ul>
+<input type="radio" name="q2" value="Last Batting Wicket" id="q2a"> Last Batting Wicket<br/>
+<input type="radio" name="q2" value="Leg Before Wicket" id="q2b"> Leg Before Wicket<br/>
+<input type="radio" name="q2" value="Last Ball Wicket" id="q2c"> Last Ball Wicket<br/>
+<input type="radio" name="q2" value="Leg Behind Wicket" id="q2d"> Leg Behind Wicket<br/>
+</ul>
+
+<p> 3.How many runs does the batting side get if a wide is bowled and the ball goes to the boundary? </p>
+<ul>
+<input type="radio" name="q3" value="3" id="q3a"> 3<br/>
+<input type="radio" name="q3" value="5" id="q3b"> 5<br/>
+<input type="radio" name="q3" value="6" id="q3c"> 6<br/>
+<input type="radio" name="q3" value="4" id="q3d"> 4<br/>
+</ul>
+
+<p> 4.What is the length of a professional cricket pitch? </p>
+<ul>
+<input type="radio" name="q4" value="29 Yards" id="q4a"> 29 Yards<br/>
+<input type="radio" name="q4" value="28 Yards" id="q4b"> 28 Yards<br/>
+<input type="radio" name="q4" value="22 Yards" id="q4c"> 22 Yards<br/>
+<input type="radio" name="q4" value="27 Yards" id="q4d"> 27 Yards<br/>
+</ul>
+
+<p> 5.Which team was the first to win an ICC 50 over world cup tournament at home?</p>
+<ul>
+<input type="radio" name="q5" value="West Indies" id="q5a"> West Indies<br/>
+<input type="radio" name="q5" value="Sri Lanka" id="q5b"> Sri Lanka<br/>
+<input type="radio" name="q5" value="Pakistan" id="q5c"> Pakistan<br/>
+<input type="radio" name="q5" value="India" id="q5d"> India<br/>
+</ul>
+
+<p> 6.Who was the first Sri Lankan bowler to pass 800 test wickets? </p>
+<ul>
+<input type="radio" name="q6" value="Chaminda Vaas" id="q6a"> Chaminda Vaas<br/>
+<input type="radio" name="q6" value="Lasith Malinga" id="q6b"> Lasith Malinga<br/>
+<input type="radio" name="q6" value="Muttiah Muralitharan" id="q6c"> Muttiah Muralitharan<br/>
+<input type="radio" name="q6" value="Rumesh Ratnayake" id="q6d"> Rumesh Ratnayake<br/>
+</ul>
+
+<p> 7. In which part of the world would you find the Wankhede Stadium? </p>
+<ul>
+<input type="radio" name="q7" value="India" id="q7a"> India<br/>
+<input type="radio" name="q7" value="Sri Lanka" id="q7b"> Sri Lanka<br/>
+<input type="radio" name="q7" value="Zimbabwe" id="q7c"> Zimbabwe<br/>
+<input type="radio" name="q7" value="South Africa" id="q7d"> South Africa<br/>
+</ul>
+
+<p> 8.After how many years is the ICC 50 overs World Cup played again? </p>
+<ul>
+<input type="radio" name="q8" value="2" id="q8a"> 2<br/>
+<input type="radio" name="q8" value="3" id="q8b"> 3<br/>
+<input type="radio" name="q8" value="4" id="q8c"> 4<br/>
+<input type="radio" name="q8" value="5" id="q8d"> 5<br/>
+</ul>
+
+<p> 9.In which year was the first IPL tournament played? </p>
+<ul>
+<input type="radio" name="q9" value="2009" id="q9a"> 2009<br/>
+<input type="radio" name="q9" value="2008" id="q9b"> 2008<br/>
+<input type="radio" name="q9" value="2010" id="q9c"> 2010<br/>
+<input type="radio" name="q9" value="2011" id="q9d"> 2011<br/>
+</ul>
+
+<p> 10.Who captained Sri Lanka to victory at the World Cup final in 1996? </p>
+<ul>
+<input type="radio" name="q10" value="Kumar Dharmasena" id="q10a"> Kumar Dharmasena<br/>
+<input type="radio" name="q10" value="Aravinda de Silva" id="q10b"> Aravinda de Silva<br/>
+<input type="radio" name="q10" value="Sanath Jayasuriya" id="q10c"> Sanath Jayasuriya<br/>
+<input type="radio" name="q10" value="Arjuna Ranatunga" id="q10d"> Arjuna Ranatunga<br/>
+</ul>
+
+
+<center><input type="button" value="Submit" class="button1" id="Score" onclick="getScore(this.form);clearTimeout(myTimer)"></center> <br/> <br/>
+ <br>  <br/>
+    
+	</div>
+	
+</div>
+
+</form> 
+
+<center><div id="results">
+
+</div> 
+</center>
+ <hr>
+ <h3>Cricket Zone</h3>
+ <ul>
+ 	<li><a href="../../Index.html">Home</a></li>
+ 	<ul>
+ 	
+ 	</ul>
+ 	<li><a href="../../Documents/prabath/BuyProduct.html">Buy Product</a></li>
+ 	<ul>
+ 	
+ 	</ul>
+ 	<li><a href="HTML CW- Yohan/Quiz/Quiz.html">Questions</a></li>
+ 	<ul>
+ 	
+ 	</ul>
+ 	<li><a href="../../Image.html">Image Collection</a></li>
+ 	<ul>
+ 	
+ 	</ul>
+ 	<li><a href="../StudentDetails/About us.html">About us</a></li>
+ 	<ul>
+ 	
+ 	</ul>
+ </ul>
+ <hr>
+
+
+
+
+<div id="footer">
+		<center>	<p role="navigate"><a href="CvYohan.html" alt="to cv"><b>Prepared by : Yohan Gunarathna</b></a></p> </center>
+		<br/> <br/> <br/>
+		</div>
+
+
+
+
+</body>
+</html>

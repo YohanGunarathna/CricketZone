@@ -1,0 +1,257 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link type="text/css" rel="stylesheet" href="tut10.css">
+</head>
+
+<body>
+
+<div class="container" >
+  <h1>The Cricket Shop</h1>
+  <div class="product" id="product1"> <img id="img1" src="kookaura.jpg" width="200px" height="200px" alt="kookabura">
+    <div class="description" >
+      <p>kookaburra hardball</p>
+      <div class="price" >
+        <p id="kokabura">RS 500.00</p>
+      </div>
+    </div>
+  </div>
+  <div class="product" id="product2"> <img id="img2"  src="ca ball.jpg" width="200px" height="200px" alt="Ca ball">
+    <div class="description">
+      <p>CA Hardball</p>
+      <div class="price">
+        <p id="ca">RS 450.00</p>
+      </div>
+    </div>
+  </div>
+  <div class="product" id="product3"> <img id="img3" src="sas ball.jpg" width="200px" height="200px" alt="sas ball">
+    <div class="description">
+      <p>SAS Hardball</p>
+      <div class="price">
+        <p id="sas">RS 550.00</p>
+      </div>
+    </div>
+  </div>
+  <div class="labelOrder">Your Order
+    <div  id="orderDescription"></div>
+    <div class="product" id="order"></div>
+  </div>
+  <div class="myOrder">
+    <p>
+    <form id="myForm">
+      <select id="bouqetOption" name="bouqetOption" >
+        <option  value="pleaseSelect">BALL</option>
+        <option value="withChampagne">BAT</option>
+        <option value="extra">PADS</option>
+        <option value="extraWithChampagne">HEADGEARS</option>
+      </select>
+      <!--Radio Buttons--> 
+      Bouqet Color:
+      <label>
+        <input type="radio" name="kookabura"  id="kookabura" value="kookabura" checked >
+        kookabura</label>
+      <label>
+        <input type="radio" name="color" id="pink" value="CA" >
+        CA</label>
+      <label>
+        <input type="radio" name="color" id="red" value="SAS" >
+        SAS</label>
+      &nbsp;&nbsp;
+      <!--<input type="reset" name="reswtButton" value="Clear your order" onClick="resetOrder()">-->
+      <input type="reset" name="resetButton" value="Clear your order">
+      <input type="button" name="order" id="orderBtn" value="Place your Order" onClick="">
+    </form>
+    </p>
+  </div>
+</div>
+<script>
+	// JavaScript Document
+
+function getRadioValue( grpName )
+{
+	var radioArray=document.getElementsByName(grpName);
+	var i;
+	for ( i = 0; i < radioArray.length; i++ )
+		{
+			if ( radioArray[ i ].checked ) {  
+			return radioArray[ i ].value;
+				
+		}
+	
+	}
+	//return "";
+	
+}
+	
+
+function getSelectedValue( selectList )
+{ 
+	return selectList[ selectList.selectedIndex ].value; 
+}
+
+function getSelectedText( selectList )
+{ 
+	return selectList.options[ selectList.selectedIndex ].text;
+}
+
+
+function checkOption(formRef)
+{
+	//var x=getSelectedValue(bouqetOption);
+	//document.write(x);
+	//var x=document.forms["myForm"]["bouqetOption"].value;
+	//var x=formRef.bouqetOption.value;
+	var x=getSelectedValue(formRef.bouqetOption);
+	console.log(x);
+	switch(x)
+		{
+				
+			case "withChampagne":
+				{
+					document.getElementById("img1").src="white-gift.jpeg";
+					document.getElementById("img2").src="pink-gift.jpeg";
+					document.getElementById("img3").src="red-gift.jpeg";
+					
+					break;
+					
+				}
+				
+			case "extra":
+				{
+					var prices=[24,25,50];
+					
+					document.getElementById("whitePrice").innerHTML='&euro;'+prices[0]*1.5;
+					document.getElementById("pinkPrice").innerHTML='&euro;'+prices[1]*1.5;
+					document.getElementById("redPrice").innerHTML='&euro;'+prices[2]*1.5;
+					break;
+				}
+			case "extraWithChampagne":
+				{
+					var prices=[24,25,50];
+					document.getElementById("img1").src="white-gift.jpeg";
+					document.getElementById("img2").src="pink-gift.jpeg";
+					document.getElementById("img3").src="red-gift.jpeg";
+					document.getElementById("whitePrice").innerHTML='&euro;'+prices[0]*1.5;
+					document.getElementById("pinkPrice").innerHTML='&euro;'+prices[1]*1.5;
+					document.getElementById("redPrice").innerHTML='&euro;'+prices[2]*1.5;
+					break;
+				}
+				default :
+				{
+					var prices=[24,25,50];
+					document.getElementById("img1").src="white.jpeg";
+					document.getElementById("img2").src="pink.jpeg";
+					document.getElementById("img3").src="red.jpeg";
+					document.getElementById("whitePrice").innerHTML='&euro;'+prices[0];
+					document.getElementById("pinkPrice").innerHTML='&euro;'+prices[1];
+					document.getElementById("redPrice").innerHTML='&euro;'+prices[2];
+					
+				}
+		}
+}
+//	var x=document.getElementById("bouqetOption").value;
+//	if (x=="withChampagne")
+//		{
+//			document.getElementById("img1").src="white-gift.jpeg";
+//		}
+	var totalPrice=0;
+function displayBouquet (bouqet)
+{
+//	var x=getRadioValue("color");
+//	alert(x);
+	
+	switch(bouqet)
+		{
+			case "White":
+				{
+					document.getElementById("order").innerHTML=document.getElementById("product1").innerHTML;
+					totalPrice=document.getElementById("whitePrice").innerHTML;
+					break;
+				}
+			case "Pink":
+			{
+				document.getElementById("order").innerHTML=document.getElementById("product2").innerHTML;
+				totalPrice=document.getElementById("pinkPrice").innerHTML;
+				break;
+			}
+			case "Red":
+			{
+				document.getElementById("order").innerHTML=document.getElementById("product3").innerHTML;
+				totalPrice=document.getElementById("redPrice").innerHTML;
+				break;
+			}
+		}
+}
+	function resetOrder()
+	{
+		document.getElementById("white").checked;
+		document.getElementById("img1").src="white.jpeg";
+		document.getElementById("img2").src="pink.jpeg";
+		document.getElementById("img3").src="red.jpeg";
+		document.getElementById("order").innerHTML="";
+		
+		var prices=[24,25,50];
+		document.getElementById("whitePrice").innerHTML='&euro;'+prices[0];
+		document.getElementById("pinkPrice").innerHTML='&euro;'+prices[1];
+		document.getElementById("redPrice").innerHTML='&euro;'+prices[2];
+		
+		totalPrice=0;
+	}
+	
+document.forms[0].addEventListener("reset",resetOrder);
+	//listners for radio buttons
+document.getElementById("white").addEventListener("click",function()
+	{
+		displayBouquet(this.value);
+	});
+document.getElementById("pink").addEventListener("click",function()
+	{
+		displayBouquet(this.value);
+	});
+document.getElementById("red").addEventListener("click",function()
+	{
+		displayBouquet(this.value);
+	});
+	
+//	document.getElementsByName("color").addEventListener("change",function()
+//														{
+//		displayBouquet(getRadioValue("color"));
+//	});
+	
+	// listeners for select
+	document.getElementById("bouqetOption").addEventListener("change",function()
+															
+	{
+		checkOption(this.form);
+	});
+	
+	// listeners for 3 images
+	document.getElementById("product1").addEventListener("click",function()
+														{
+		displayBouquet("White");
+		document.getElementById("white").checked=true;
+	});
+	
+	document.getElementById("product2").addEventListener("click",function()
+														{
+		displayBouquet("Pink");
+		document.getElementById("pink").checked=true;
+	});
+	
+	document.getElementById("product3").addEventListener("click",function()
+														{
+		displayBouquet("Red");
+		document.getElementById("red").checked=true;
+	});
+	
+	document.getElementById("orderBtn").addEventListener("click",function()
+														{
+		alert(totalPrice);
+	})
+	
+	</script>
+</body>
+</html>

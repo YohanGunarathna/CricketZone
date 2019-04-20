@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Product</title>
+<link type="text/css" rel="stylesheet" href="product.css">
+</head>
+
+<body>
+
+<div class="container" >
+<h1>CRICKET ZONE</h1>
+<!---->
+	<p>
+	<form id="myForm">
+      <select id="bouqetOption" name="bouqetOption" onChange="checkOption(myForm)">
+        <option  value="pleaseSelect">Please Select</option>
+        <option value="ball">Ball</option>
+        <option value="bat">Bat</option>
+        <option value="pad">Pads</option>
+      </select>
+	
+	Cricket Product:
+		<label>
+		<input type="radio" name="product" id="bat" value="Bat" checked>
+		Bat</label>
+		
+		<label>
+		<input type="radio" name="product" id="ball" value="Ball" checked>
+		Ball</label>
+		
+		<label>
+		<input type="radio" name="product" id="footwear" value="footwear" checked>
+		Footwear</label>
+	</form>
+	
+	<form>
+	<!-- Product 1-->
+	<div class="center">	
+	<div class="product" id="product1"> <img id="img1"  src="img/kookaburra ball.jpg"  width="250px" height="250px" alt="kookaburra" >
+    <div class="description" >
+      <p id="item1" value="kookaburra">kookaburra</p>
+      <div class="price" >
+       <p id="kookaburra" value="500">Rs.500</p>
+      </div><br /><br /><br /><br />
+	  <button onclick="myFunction()">Add to cart</button>
+    </div>
+	</div>
+	
+	<!-- Product 2-->
+	<div class="product" id="product2"> <img id="img2"  src="img/ca ball.jpg" width="250px" height="250px" alt="Ca ball">
+    <div class="description">
+      <p id="item2" value="ca">CA</p>
+      <div class="price">
+        <p id="ca">Rs.450</p>
+      </div><br /><br /><br /><br />
+	  <button onclick="myFunction()">Add to cart</button>
+    </div>
+	</div>
+	
+	<!-- Product 3-->
+	<div class="product" id="product3"> <img id="img3" src="img/sas ball.jpg" width="250px" height="250px" alt="sas ball">
+    <div class="description">
+      <p id="item3" value="sas">SAS</p>
+      <div class="price">
+        <p id="sas">Rs.550</p>
+      </div><br /><br /><br /><br />
+	  <button onclick="myFunction()">Add to cart</button>
+    </div>
+	</div>
+	
+	<!-- Product 4-->
+	<div class="product" id="product4"> <img id="img4" src="img/sg ball.jpg" width="250px" height="250px" alt="sg ball">
+    <div class="description">
+      <p id="item4" value="sg">SG</p>
+      <div class="price">
+        <p id="sg">Rs.529</p>
+      </div><br /><br /><br /><br />
+	  <button onclick="myFunction()">Add to cart</button>
+    </div>
+	</div>
+	<!-- Product 5-->
+	<div class="product" id="product5"> <img id="img5" src="img/hammer ball.jpg" width="250px" height="250px" alt="hammer ball">
+    <div class="description">
+      <p id="item5" value="hammer">HAMMER</p>
+      <div class="price">
+        <p id="hammer">Rs.2200</p>
+      </div><br /><br /><br /><br />
+	  <button onclick="myFunction()">Add to cart</button>
+    </div>
+	</div>
+	
+	<!-- Product 6-->
+	<div class="product" id="product6"> <img id="img6" src="img/gm ball.jpg" width="250px" height="250px" alt="gm ball">
+    <div class="description">
+      <p id="item6" value="gm">GM</p>
+      <div class="price">
+        <p id="gm">Rs.1090</p>
+      </div><br /><br /><br /><br />
+	  <button onclick="myFunction()">Add to cart</button>
+    </div>
+	</div>
+	</div>
+	</form>
+	
+	<form id ="text">	</form>
+	</p>	
+</div>
+
+<input type="button" value="Increase Font Size 100px" onclick="increaseFontSizeBy100px()">
+	<p id="a">Font Size</p>
+
+<input type="button" value="Increase Font Size 1px" onclick="increaseFontSizeBy1px()">
+	<p id="b">Font Size by 1 Pixel</p>
+	
+
+	
+<div id="footer" style="position:relative;margin-left:500px;float:left;">
+	<p><a href="../Index.html">Home</a> | <a href="product.html">Online Store</a> | <a href="../HTML CW- Yohan/Quiz/Quiz.html">Quiz</a> | <a href="../Image.html">Image Collection</a> | <a href="../HTML CW- Yohan/StudentDetails/About us.html">About Us</a></p>
+	<p><center>Copyright &copy; <a href="index.html">Cricket Zone</a> | 2017 | Powered By -<a href="cv_isuru.html">Isuru Weeraddana</a></center></p>
+</div>
+</footer>
+</body>
+</html>
+	
+<script>
+function myFunction() {
+var name = document.getElementById("item1").textContent;
+var price = document.getElementById("kookaburra").textContent;
+	
+	var info="Name is "+name+" Price: "+price;
+	window.alert( info);
+	}
+
+	function addToCartDetails(price){
+
+	}
+
+	function getSelectedValue( selectList ){ 
+	return selectList[ selectList.selectedIndex ].value; 
+	}
+
+	function getSelectedText( selectList ){ 
+	return selectList.options[ selectList.selectedIndex ].text;
+	}
+	
+	function checkOption(formRef){
+	var x=getSelectedValue(formRef.bouqetOption);
+	console.log(x);
+	switch(x){
+				
+			case "ball":
+				{
+					var price=[500,450,550,529,2200,1090];
+					document.getElementById("img1").src="img/kookaburra ball.jpg";
+					document.getElementById("img2").src="img/ca ball.jpg";
+					document.getElementById("img3").src="img/sas ball.jpg";
+					document.getElementById("img4").src="img/sg ball.jpg";
+					document.getElementById("img5").src="img/hammer ball.jpg";
+					document.getElementById("img6").src="img/gm ball.jpg";
+					
+					document.getElementById("kookaburra").innerHTML='Rs'+price[0];
+					document.getElementById("ca").innerHTML='Rs.'+price[1];
+					document.getElementById("sas").innerHTML='Rs.'+price[2];
+					document.getElementById("sg").innerHTML='Rs.'+price[3];
+					document.getElementById("hammer").innerHTML='Rs.'+price[4];
+					document.getElementById("gm").innerHTML='Rs.'+price[5];
+					break;
+					
+				}
+				
+			case "bat":
+				{
+					var price=[4500,6950,3500,48600,77490,85650];
+					document.getElementById("img1").src="img/kookaburra bat.jpg";
+					document.getElementById("img2").src="img/ca bat.jpg";
+					document.getElementById("img3").src="img/sas bat.jpg";
+					document.getElementById("img4").src="img/sg bat.jpg";
+					document.getElementById("img5").src="img/hammer bat.jpg";
+					document.getElementById("img6").src="img/gm bat.jpg";
+					
+					document.getElementById("kookaburra").innerHTML='Rs'+price[0];
+					document.getElementById("ca").innerHTML='Rs.'+price[1];
+					document.getElementById("sas").innerHTML='Rs.'+price[2];
+					document.getElementById("sg").innerHTML='Rs.'+price[3];
+					document.getElementById("hammer").innerHTML='Rs.'+price[4];
+					document.getElementById("gm").innerHTML='Rs.'+price[5];
+					break;
+				}
+			case "pad":
+				{
+					var price=[2700,2500,1500,3750,20130,11230];
+					document.getElementById("img1").src="img/kookaburra pad.jpg";
+					document.getElementById("img2").src="img/ca pad.jpg";
+					document.getElementById("img3").src="img/sas pad.jpg";
+					document.getElementById("img4").src="img/sg pad.jpg";
+					document.getElementById("img5").src="img/hammer pad.jpeg";
+					document.getElementById("img6").src="img/gm pad.jpeg";
+					
+					document.getElementById("kookaburra").innerHTML='Rs'+price[0];
+					document.getElementById("ca").innerHTML='Rs.'+price[1];
+					document.getElementById("sas").innerHTML='Rs.'+price[2];
+					document.getElementById("sg").innerHTML='Rs.'+price[3];
+					document.getElementById("hammer").innerHTML='Rs.'+price[4];
+					document.getElementById("gm").innerHTML='Rs.'+price[5];
+					break;
+				}
+				
+		}
+}
+</script>
+

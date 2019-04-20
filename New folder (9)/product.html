@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Product</title>
+<link type="text/css" rel="stylesheet" href="product.css">
+</head>
+
+
+<body>
+
+<div class="container" >
+<h1>CRICKET ZONE</h1>
+<!---->
+	<p>
+	<form id="myForm">
+      <select id="bouqetOption" name="bouqetOption" onChange="checkOption(myForm)">
+        <option  value="pleaseSelect">Please Select</option>
+        <option value="ball">Ball</option>
+        <option value="bat">Bat</option>
+        <option value="pad">Pads</option>
+      </select>
+	
+	
+		Cricket Product:
+		<label>
+		  <input type="radio" name="product" id="bat" value="Bat" checked>
+			Bat</label>
+			<label>
+			
+			<input type="radio" name="product" id="ball" value="Ball" checked>
+			BAll</label>
+			<label>
+			
+			<input type="radio" name="product" id="footwear" value="footwear" checked>	
+			 Footwear</label>
+	</form>
+	<form>
+	<div class="center">	
+	<div class="product" id="product1"> <img id="img1"  src="kookaura.jpg"  width="234px" height="200px" alt="kookabura" >
+    <div class="description" >
+      <p>kookaburra</p>
+      <div class="price" >
+       <p id="kokabura">RS 500</p>
+      </div>
+    </div>
+  </div>
+  <div class="product" id="product2"> <img id="img2"  src="ca ball.jpg" width="234px" height="200px" alt="Ca ball">
+    <div class="description">
+      <p>CA</p>
+      <div class="price">
+        <p id="ca">RS 450</p>
+      </div>
+    </div>
+  </div>
+  <div class="product" id="product3"> <img id="img3" src="sas ball.jpg" width="234px" height="200px" alt="sas ball">
+    <div class="description">
+      <p>SAS</p>
+      <div class="price">
+        <p id="sas">RS 550</p>
+      </div>
+    </div>
+  </div>
+	</div>
+	
+	</form>
+	<form id ="text">
+		
+	</form>
+	
+	
+	<div class="myOrder">
+	<form>
+		name:<input type="text" value="name" size="50px"> <br>
+		telephone:<input type="tel" value="number" ><br>
+		Email:<input type="email" value="Email">
+	</form>
+	</div>
+	
+	</p>
+	
+	
+<!---->
+
+	
+	</div>
+	
+
+		
+<script>
+	function getSelectedValue( selectList )
+{ 
+	return selectList[ selectList.selectedIndex ].value; 
+}
+
+function getSelectedText( selectList )
+{ 
+	return selectList.options[ selectList.selectedIndex ].text;
+}
+	
+	function checkOption(formRef)
+{
+	
+	var x=getSelectedValue(formRef.bouqetOption);
+	console.log(x);
+	switch(x)
+		{
+				
+			case "ball":
+				{
+					var price=[500,450,550];
+					document.getElementById("img1").src="kookaura.jpg";
+					document.getElementById("img2").src="ca ball.jpg";
+					document.getElementById("img3").src="sas ball.jpg";
+					document.getElementById("kokabura").innerHTML='RS'+price[0];
+					document.getElementById("ca").innerHTML='RS'+price[1];
+					document.getElementById("sas").innerHTML='RS'+price[2];
+					
+					break;
+					
+				}
+				
+			case "bat":
+				{
+					var price=[4500,6000,3500];
+					document.getElementById("img1").src="kokabura bat.jpg";
+					document.getElementById("img2").src="ca bat.jpg";
+					document.getElementById("img3").src="sas bat .jpg";
+					document.getElementById("kokabura").innerHTML='RS'+price[0];
+					document.getElementById("ca").innerHTML='RS'+price[1];
+					document.getElementById("sas").innerHTML='RS'+price[2];
+					break;
+				}
+			case "pad":
+				{
+					var price=[2700,2500,1500];
+					document.getElementById("img1").src="kok pad.jpg";
+					document.getElementById("img2").src="ca pad.jpg";
+					document.getElementById("img3").src="sas pad.jpg";
+					document.getElementById("kokabura").innerHTML='RS'+price[0];
+					document.getElementById("ca").innerHTML='RS'+price[1];
+					document.getElementById("sas").innerHTML='RS'+price[2];
+					break;
+				}
+				
+		}
+}
+	
+	
+	
+	</script>
+
+	
+	
+	
+
+	
+</body>
+
+</html>

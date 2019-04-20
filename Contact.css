@@ -1,0 +1,95 @@
+@charset "utf-8";
+/* CSS Document */
+#contact {
+    height:70%;
+    padding: 2% 5% 2% 5%;
+    overflow-y: hidden;
+}
+
+#contact p{
+    text-align: center;
+    margin-bottom:0.5%;
+    font-size: 1.6em;
+    color: rgba(69,69,69,.8);
+}
+
+form h7{
+    color:rgba(17,55,87,.7);
+    font-size: 1.5em;
+    font-family: chicStripe;
+    display: inline-block;
+    margin-right: .5%;
+    margin-bottom:2%;
+    vertical-align: text-top;
+}
+
+form{
+    margin-left:10%;
+    width: 80%;
+}
+
+input,textarea{
+
+    display: inline-block;
+    background:rgb(241,241,241);
+    width: 95%;
+    padding:.5% 1.4%;
+    border-radius:6px;
+    font-size:1em;
+    font-family:chicSolid;
+    color: rgba(89,89,89,1);
+    border: 1px solid;
+    border-color: rgba(204,209,209,1);
+    float:right;
+    resize: none;
+    vertical-align: middle;
+    margin-bottom:1%;
+    }
+
+
+.rate-area {
+  float: left;
+  border-style: none;
+}
+
+.rate-area:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+  clip: rect(0,0,0,0);
+}
+
+.rate-area:not(:checked) > label {
+  float: right;
+  width: 1em;
+  padding: 0 .1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 400%;
+  line-height: 1.2;
+  color: lightgrey;
+  text-shadow: 1px 1px #bbb;
+}
+
+.rate-area:not(:checked) > label:before { content: '★ '; }
+
+.rate-area > input:checked ~ label {
+  color: gold;
+  text-shadow: 1px 1px #c60;
+  font-size: 450% !important;
+}
+
+.rate-area:not(:checked) > label:hover, .rate-area:not(:checked) > label:hover ~ label { color: gold; }
+
+.rate-area > input:checked + label:hover, .rate-area > input:checked + label:hover ~ label, .rate-area > input:checked ~ label:hover, .rate-area > input:checked ~ label:hover ~ label, .rate-area > label:hover ~ input:checked ~ label {
+  color: gold;
+  text-shadow: 1px 1px goldenrod;
+}
+
+.rate-area > label:active {
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+
+
